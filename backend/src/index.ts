@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 5001
 
 app.use(cors({
     origin: process.env.ALLOWED_ORIGIN,
+    methods: ['GET','POST'],
 }))
 app.use(express.json()); //for parsing json data
 app.use(cookieParser())
