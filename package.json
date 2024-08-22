@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "postinstall": "npm prisma generate",
     "dev": "nodemon --watch backend/src --exec bun backend/src/index.ts"
   },
   "keywords": [],
