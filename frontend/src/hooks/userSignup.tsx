@@ -19,7 +19,7 @@ export const useSignup = () => {
         
         try {
             setLoading(true)
-            const res = await fetch("/api/auth/signup",{
+            const res = await fetch("https://private-messaging-app.vercel.app/api/auth/signup",{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
