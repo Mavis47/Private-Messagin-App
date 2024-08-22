@@ -25,6 +25,8 @@ model User {
   conversationIds String[]
   conversations   Conversation[]
   messages        Message[]
+
+  @@map("private-messaging-user")
 }
 
 model Conversation {
@@ -51,6 +53,8 @@ model Message {
   body      String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@map("Private-message-table")
 }
 
 enum Gender {
