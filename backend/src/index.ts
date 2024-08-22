@@ -20,3 +20,4 @@ server.listen(PORT,() => {
 })
 
 //add socket io to the server(backend)
+export default app;
