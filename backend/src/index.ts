@@ -3,9 +3,13 @@ import authRoutes from './routes/authRoutes.js';
 import messageRoutes from './routes/messageRoutes.js';
 import cookieParser from "cookie-parser";
 import { app, server } from './socket/socket.js';
+import cors from "cors";
 
 const PORT = process.env.PORT || 5001
 
+app.use(cors({
+    origin: process.env.ALLOWED_ORIGIN,
+}))
 app.use(express.json()); //for parsing json data
 app.use(cookieParser())
 app.use("/api/auth",authRoutes)
