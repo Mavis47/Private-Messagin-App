@@ -9,7 +9,7 @@ export default function useLogout() {
     const logout = async() => {
         setLoading(true)
         try {
-            const res  = await fetch("/api/auth/logout",{
+            const res  = await fetch("https://private-messaging-app.vercel.app/api/auth/logout",{
                 method: "POST",
             })
             const data = await res.json();
