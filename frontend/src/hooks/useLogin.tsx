@@ -10,7 +10,7 @@ export default function useLogin() {
     try {
       setLoading(true);
       const res = await fetch(
-        `https://private-messaging-app.vercel.app/auth/login`,
+        `https://private-messaging-app.vercel.app/api/auth/login`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -13,7 +13,7 @@ export default function useGetMessages() {
 
       try {
         const res = await fetch(
-          `https://private-messaging-app.vercel.app/messages/${selectedConversation.id}`
+          `https://private-messaging-app.vercel.app/api/messages/${selectedConversation.id}`
         );
         const data = await res.json();
         console.log("Data", data);

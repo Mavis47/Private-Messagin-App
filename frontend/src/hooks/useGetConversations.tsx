@@ -10,7 +10,7 @@ export default function useGetConversations() {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://private-messaging-app.vercel.app/messages/conversations`
+          `https://private-messaging-app.vercel.app/api/messages/conversations`
         );
         const data = await res.json();
         if (data.error) {

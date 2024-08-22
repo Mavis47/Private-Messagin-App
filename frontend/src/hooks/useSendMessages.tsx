@@ -12,7 +12,7 @@ export const useSendMessage = () => {
 
     try {
       const res = await fetch(
-        `https://private-messaging-app.vercel.app/messages/send/${selectedConversation.id}`,
+        `https://private-messaging-app.vercel.app/api/messages/send/${selectedConversation.id}`,
         {
           method: "POST",
           headers: {
